@@ -173,7 +173,7 @@ insert into users(status, email, password, role, username) values ('ACTIVE', 'ad
     ]
 }
 ```
-* Для получения пройденных пользователем опросов (GET: http://localhost:8070/participant/surveyTaking/{id участника})
+* Для получения пройденных пользователем опросов (GET: http://localhost:8070/participant/surveyTaking/{id участника}) с детализацией по ответам
 ![14][14]
 ```sh
 [
