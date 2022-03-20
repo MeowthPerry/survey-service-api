@@ -33,7 +33,7 @@ insert into users(status, email, password, role, username) values ('ACTIVE', 'ad
 * Все запросы админа должны сопровождаться хедером Authorization c действующим токеном (см. скрин ниже). Чтобы получить access token и refresh token необходимо послать запрос на 'http://localhost:8080/auth/login' с username и password в формате JSON
 ![1][1]
 ![3][3]
-* Чтобы обновить access token с помощью refresh token'а нужно послать запрос на 'http://localhost:8070/auth/relogin' с указанным refresh token'ом
+* Чтобы обновить access token с помощью refresh token'а нужно послать запрос на 'http://localhost:8070/auth/relogin' с указанным refresh token'ом. После этого старый refresh token заносится в черный список и становится недействительным
 ![2][2]
 * Для создания опроса (POST: http://localhost:8080/admin/survey)
 ![4][4]
