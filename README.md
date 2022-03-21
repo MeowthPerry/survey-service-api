@@ -33,23 +33,23 @@ insert into users(status, email, password, role, username) values ('ACTIVE', 'ad
 * Все запросы админа должны сопровождаться хедером Authorization c действующим токеном (см. скрин ниже). Чтобы получить access token и refresh token необходимо послать запрос на 'http://localhost:8080/auth/login' с username и password в формате JSON
 ![1][1]
 ![3][3]
-* Чтобы обновить access token с помощью refresh token'а нужно послать запрос на 'http://localhost:8070/auth/relogin' с указанным refresh token'ом. После этого старый refresh token заносится в черный список и становится недействительным
+* Чтобы обновить access token с помощью refresh token'а нужно послать запрос на 'http://localhost:8080/auth/relogin' с указанным refresh token'ом. После этого старый refresh token заносится в черный список и становится недействительным
 ![2][2]
 * Для создания опроса (POST: http://localhost:8080/admin/survey)
 ![4][4]
 * Для изменения опроса (PUT: http://localhost:8080/admin/survey/{id опроса}) с указанием полей, которые нужно изменить. Поле "дата старта" изменить невозможно
 ![5][5]
-* Для удаления опроса (DELETE: http://localhost:8070/admin/survey/{id опроса})
+* Для удаления опроса (DELETE: http://localhost:8080/admin/survey/{id опроса})
 ![6][6]
-* Для создания вопроса (POST: http://localhost:8070/admin/survey/{id опроса}/question)
+* Для создания вопроса (POST: http://localhost:8080/admin/survey/{id опроса}/question)
 ![7][7]
 ![8][8]
 ![9][9]
-* Для изменения вопроса (PUT: http://localhost:8070/admin/survey/{id опроса}/question/{id вопроса}) с указанием полей, которые нужно изменить
+* Для изменения вопроса (PUT: http://localhost:8080/admin/survey/{id опроса}/question/{id вопроса}) с указанием полей, которые нужно изменить
 ![10][10]
-* Для удаления вопроса (DELETE: http://localhost:8070/admin/survey/{id опроса}/question/{id вопроса})
+* Для удаления вопроса (DELETE: http://localhost:8080/admin/survey/{id опроса}/question/{id вопроса})
 ![11][11]
-* Для получения списка активных опросов (GET: http://localhost:8070/participant/survey). Хедер Authorization не нужен
+* Для получения списка активных опросов (GET: http://localhost:8080/participant/survey). Хедер Authorization не нужен
 ![12][12]
 ```sh
 [
@@ -173,7 +173,7 @@ insert into users(status, email, password, role, username) values ('ACTIVE', 'ad
     ]
 }
 ```
-* Для получения пройденных пользователем опросов (GET: http://localhost:8070/participant/surveyTaking/{id участника}) с детализацией по ответам
+* Для получения пройденных пользователем опросов (GET: http://localhost:8080/participant/surveyTaking/{id участника}) с детализацией по ответам
 ![14][14]
 ```sh
 [
