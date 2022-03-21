@@ -49,7 +49,7 @@ insert into users(status, email, password, role, username) values ('ACTIVE', 'ad
 ![10][10]
 * Для удаления вопроса (DELETE: http://localhost:8080/admin/survey/{id опроса}/question/{id вопроса})
 ![11][11]
-* Для получения списка активных опросов (GET: http://localhost:8080/participant/survey). Хедер Authorization не нужен
+* Для получения списка активных опросов (GET: http://localhost:8080/participant/survey). В дальнейших запросах хедер Authorization не нужен
 ![12][12]
 ```sh
 [
